@@ -16,9 +16,9 @@ export const PracticeAreaModal: React.FC<PracticeAreaModalProps> = ({
   if (!practiceArea) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80  flex items-center justify-center p-4 sm:p-6">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 text-slate-800 animate-in fade-in zoom-in duration-200"
+        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200 text-slate-800 animate-in fade-in zoom-in duration-200"
       >
         {/* Header */}
         <div className="bg-slate-900 text-white p-6 sm:p-8 relative">

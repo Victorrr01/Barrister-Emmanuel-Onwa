@@ -76,10 +76,10 @@ export default function App() {
           target="_blank"
           rel="noopener noreferrer"
           id="floating-whatsapp-btn"
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group"
+          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-md flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group"
           title="Chat on WhatsApp (+234 806 471 0262)"
         >
-          <MessageCircle className="w-4 h-4 animate-bounce" />
+          <MessageCircle className="w-4 h-4" />
           <span className="hidden sm:inline">WhatsApp (+234 806 471 0262)</span>
         </a>
 
@@ -97,7 +97,7 @@ export default function App() {
           <button
             onClick={() => handleOpenBooking()}
             id="floating-booking-btn"
-            className="h-11 px-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-amber-300"
+            className="h-11 px-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold shadow-md flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-amber-300"
           >
             <Calendar className="w-4 h-4" />
             <span className="hidden sm:inline">Book Consultation</span>

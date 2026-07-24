@@ -51,12 +51,11 @@ export const Home: React.FC<HomeProps> = ({
   };
 
   return (
-    <div className="space-y-20 pb-16">
+    <div className="bg-slate-50 space-y-20 pb-16">
       
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-12 pb-20 overflow-hidden border-b border-slate-800">
+      <section className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-12 pb-20 border-b border-slate-800">
         {/* Background ambient lighting */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-amber-500/5 rounded-full pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -65,7 +64,7 @@ export const Home: React.FC<HomeProps> = ({
             <div className="lg:col-span-7 space-y-8">
               
               <div className="inline-flex items-center space-x-2 bg-slate-800/90 border border-amber-500/30 px-4 py-1.5 rounded-full shadow-inner">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-amber-400"></span>
                 <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">
                   Senior Legal Practitioner • Nationwide Practice Across All 36 States & FCT
                 </span>
@@ -129,13 +128,12 @@ export const Home: React.FC<HomeProps> = ({
             {/* Right Visual Graphic (Lady Justice Image Asset) */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-sm lg:max-w-none">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-amber-700/20 rounded-3xl"></div>
-                <div className="relative bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative bg-slate-900 border border-slate-700/80 rounded-2xl  shadow-md">
                   <img
                     src={ladyJusticeImg}
                     alt="Classical Lady Justice Statue"
                     referrerPolicy="no-referrer"
-                    className="w-full h-[420px] object-cover object-center"
+                    className="w-full h-[420px] object-cover object-center rounded-2xl"
                   />
                   
                   {/* Floating Circular Badge Overlay */}
@@ -171,12 +169,12 @@ export const Home: React.FC<HomeProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-4">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
+              <div className="relative rounded-2xl  border-2 border-slate-200 shadow-lg">
                 <img
                   src={lawSymbolImg}
                   alt="Scales of Justice & Legal Symbol"
                   referrerPolicy="no-referrer"
-                  className="w-full h-[380px] object-cover"
+                  className="w-full h-[380px] object-cover rounded-2xl"
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-slate-950/90 text-white p-3 text-center border-t border-slate-800">
                   <span className="font-serif font-bold text-sm text-amber-400 block">{ATTORNEY_INFO.firmName}</span>
@@ -233,7 +231,7 @@ export const Home: React.FC<HomeProps> = ({
       </section>
 
       {/* KEY PRACTICE AREAS OVERVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10 bg-slate-50 py-4">
         <div className="text-center space-y-3">
           <span className="text-amber-800 font-bold text-xs uppercase tracking-widest block">
             Tailored Estate Management & Planning
@@ -253,10 +251,10 @@ export const Home: React.FC<HomeProps> = ({
               <div
                 key={area.id}
                 onClick={() => onSelectPracticeArea(area)}
-                className="group bg-white border border-slate-200/90 hover:border-amber-500 rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group bg-white border border-slate-200/90 hover:border-amber-500 rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300 shadow-md group-hover:scale-105">
+                  <div className="w-12 h-12 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300 shadow-md">
                     <IconComp className="w-6 h-6" />
                   </div>
 
@@ -271,7 +269,7 @@ export const Home: React.FC<HomeProps> = ({
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-900 group-hover:text-amber-700">
                   <span>View Service Breakdown</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5 text-amber-600" />
+                  <ArrowRight className="w-4 h-4 transition-colors duration-300 text-amber-600" />
                 </div>
               </div>
             );
@@ -368,7 +366,7 @@ export const Home: React.FC<HomeProps> = ({
 
       {/* BOTTOM CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-md flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 text-center md:text-left">
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
               Ready to Protect Your Family's Legacy?

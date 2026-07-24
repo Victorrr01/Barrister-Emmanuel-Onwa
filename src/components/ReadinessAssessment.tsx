@@ -90,9 +90,8 @@ export const ReadinessAssessment: React.FC<ReadinessAssessmentProps> = ({ onOpen
   const report = getScoreReport();
 
   return (
-    <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 relative overflow-hidden">
+    <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-md border border-slate-800 relative overflow-hidden">
       {/* Decorative background glow */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full pointer-events-none"></div>
 
       <div className="max-w-3xl mx-auto space-y-8 relative z-10">
         

@@ -33,7 +33,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
           
           {/* Left Column: Portrait & Quick Stats Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white border-2 border-slate-200 rounded-3xl p-4 shadow-xl overflow-hidden">
+            <div className="bg-white border-2 border-slate-200 rounded-3xl p-4 shadow-xl ">
               <img
                 src={lawSymbolImg}
                 alt="Scales of Justice & Legal Symbol"

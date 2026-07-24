@@ -252,7 +252,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBooking, onSelectPract
 
       {/* Download Checklist Modal */}
       {downloadModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80  flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full border border-slate-200 shadow-2xl relative">
             <button 
               onClick={() => { setDownloadModalOpen(false); setDownloadSuccess(false); }}

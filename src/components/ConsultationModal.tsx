@@ -45,9 +45,9 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   const timeSlots = ['09:00 AM', '10:30 AM', '01:00 PM', '02:30 PM', '04:00 PM'];
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80  flex items-center justify-center p-3 sm:p-6">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 text-slate-800 animate-in fade-in zoom-in duration-200 my-auto"
+        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200 text-slate-800 animate-in fade-in zoom-in duration-200 my-auto"
         id="consultation-modal-container"
       >
         {/* Top Modal Header */}
