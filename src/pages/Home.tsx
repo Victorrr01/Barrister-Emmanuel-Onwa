@@ -103,22 +103,22 @@ export const Home: React.FC<HomeProps> = ({
               </div>
 
               {/* Trust Badge Bar */}
-              <div className="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-slate-300">
-                <div>
-                  <div className="font-serif text-2xl font-bold text-amber-400">18+ Years</div>
-                  <div className="text-xs text-slate-400 uppercase tracking-wider">Active Legal Practice</div>
+              <div className="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-amber-500/40 transition-colors">
+                  <div className="font-serif text-2xl lg:text-3xl font-bold text-amber-400">18+ Years</div>
+                  <div className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">Active Legal Practice</div>
                 </div>
-                <div>
-                  <div className="font-serif text-2xl font-bold text-amber-400">1,500+</div>
-                  <div className="text-xs text-slate-400 uppercase tracking-wider">Clients Represented</div>
+                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-amber-500/40 transition-colors">
+                  <div className="font-serif text-2xl lg:text-3xl font-bold text-amber-400">1,500+</div>
+                  <div className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">Clients Represented</div>
                 </div>
-                <div>
-                  <div className="font-serif text-2xl font-bold text-amber-400">99.2%</div>
-                  <div className="text-xs text-slate-400 uppercase tracking-wider">Success Record</div>
+                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-amber-500/40 transition-colors">
+                  <div className="font-serif text-2xl lg:text-3xl font-bold text-amber-400">99.2%</div>
+                  <div className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">Success Record</div>
                 </div>
-                <div>
-                  <div className="font-serif text-2xl font-bold text-amber-400">₦12.5B+</div>
-                  <div className="text-xs text-slate-400 uppercase tracking-wider">Assets & Land Secured</div>
+                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-amber-500/40 transition-colors">
+                  <div className="font-serif text-2xl lg:text-3xl font-bold text-amber-400">₦12.5B+</div>
+                  <div className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">Assets & Land Secured</div>
                 </div>
               </div>
 
@@ -244,17 +244,17 @@ export const Home: React.FC<HomeProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {PRACTICE_AREAS.map((area) => {
             const IconComp = getIcon(area.iconName);
             return (
               <div
                 key={area.id}
                 onClick={() => onSelectPracticeArea(area)}
-                className="group bg-white border border-slate-200 hover:border-amber-500/80 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col justify-between"
+                className="group bg-white border border-slate-200/90 hover:border-amber-500 rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors shadow-md">
+                  <div className="w-12 h-12 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300 shadow-md group-hover:scale-105">
                     <IconComp className="w-6 h-6" />
                   </div>
 
@@ -262,14 +262,14 @@ export const Home: React.FC<HomeProps> = ({
                     {area.title}
                   </h3>
 
-                  <p className="text-slate-600 text-xs leading-relaxed mb-4">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
                     {area.shortDesc}
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-900 group-hover:text-amber-700">
                   <span>View Service Breakdown</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5 text-amber-600" />
                 </div>
               </div>
             );

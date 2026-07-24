@@ -112,13 +112,16 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
                   key={item.page}
                   id={`nav-item-${item.page}`}
                   onClick={() => onNavigate(item.page)}
-                  className={`px-3.5 py-2 rounded-md text-sm font-medium transition-all ${
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? 'text-amber-400 bg-slate-800/90 font-semibold border border-amber-500/30'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                      ? 'text-amber-400 bg-slate-800/90 font-semibold border border-amber-500/40 shadow-inner'
+                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                   }`}
                 >
-                  {item.label}
+                  <span>{item.label}</span>
+                  {isActive && (
+                    <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"></span>
+                  )}
                 </button>
               );
             })}

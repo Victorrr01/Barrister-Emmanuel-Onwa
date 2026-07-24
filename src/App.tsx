@@ -70,36 +70,39 @@ export default function App() {
       </main>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-30 flex flex-col items-end space-y-3">
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3 pointer-events-auto">
         <a
           href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about legal consultation/representation.')}`}
           target="_blank"
           rel="noopener noreferrer"
           id="floating-whatsapp-btn"
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all border border-emerald-400 group"
+          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group backdrop-blur-md"
           title="Chat on WhatsApp (+234 806 471 0262)"
         >
-          <MessageCircle className="w-4 h-4" />
+          <MessageCircle className="w-4 h-4 animate-bounce" />
           <span className="hidden sm:inline">WhatsApp (+234 806 471 0262)</span>
         </a>
 
-        <button
-          onClick={() => setAiAssistantOpen(true)}
-          id="floating-ai-assistant-btn"
-          className="w-12 h-12 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group"
-          title="Ask Estate Assistant"
-        >
-          <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-        </button>
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => setAiAssistantOpen(true)}
+            id="floating-ai-assistant-btn"
+            className="h-11 px-3.5 rounded-full bg-slate-900/95 text-amber-400 border border-amber-500/40 shadow-xl flex items-center space-x-2 text-xs font-semibold hover:bg-slate-900 hover:scale-105 active:scale-95 transition-all duration-200 group backdrop-blur-md"
+            title="Ask Legal AI FAQ Guide"
+          >
+            <MessageSquare className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
+            <span className="hidden md:inline">Ask AI Guide</span>
+          </button>
 
-        <button
-          onClick={() => handleOpenBooking()}
-          id="floating-booking-btn"
-          className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all border border-amber-300"
-        >
-          <Calendar className="w-4 h-4" />
-          <span className="hidden sm:inline">Book Consultation</span>
-        </button>
+          <button
+            onClick={() => handleOpenBooking()}
+            id="floating-booking-btn"
+            className="h-11 px-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-amber-300"
+          >
+            <Calendar className="w-4 h-4" />
+            <span className="hidden sm:inline">Book Consultation</span>
+          </button>
+        </div>
       </div>
 
       {/* Footer */}
