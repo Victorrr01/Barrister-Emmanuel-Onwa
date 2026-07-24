@@ -1,6 +1,7 @@
 import React from 'react';
 import { ATTORNEY_INFO, CREDENTIALS } from '../data/legalData';
 import { Shield, Award, GraduationCap, CheckCircle2, Calendar, Scale, BookOpen, HeartHandshake } from 'lucide-react';
+import lawSymbolImg from '../assets/images/law_symbol_scales_gavel_1784878581133.jpg';
 
 interface AboutProps {
   onOpenBooking: () => void;
@@ -34,7 +35,7 @@ export const About: React.FC<AboutProps> = ({ onOpenBooking }) => {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white border-2 border-slate-200 rounded-3xl p-4 shadow-xl overflow-hidden">
               <img
-                src="/src/assets/images/law_symbol_scales_gavel_1784878581133.jpg"
+                src={lawSymbolImg}
                 alt="Scales of Justice & Legal Symbol"
                 referrerPolicy="no-referrer"
                 className="w-full h-[440px] object-cover rounded-2xl"

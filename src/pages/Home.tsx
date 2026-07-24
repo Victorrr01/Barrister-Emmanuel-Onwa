@@ -3,6 +3,8 @@ import { ATTORNEY_INFO, PRACTICE_AREAS, TRUST_PILLARS, TESTIMONIALS } from '../d
 import { PracticeArea } from '../types';
 import { ReadinessAssessment } from '../components/ReadinessAssessment';
 import { FeeEstimator } from '../components/FeeEstimator';
+import ladyJusticeImg from '../assets/images/lady_justice_statue_1784873399908.jpg';
+import lawSymbolImg from '../assets/images/law_symbol_scales_gavel_1784878581133.jpg';
 import { 
   ShieldCheck, 
   Calendar, 
@@ -130,7 +132,7 @@ export const Home: React.FC<HomeProps> = ({
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-700 rounded-3xl blur-xl opacity-30"></div>
                 <div className="relative bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="/src/assets/images/lady_justice_statue_1784873399908.jpg"
+                    src={ladyJusticeImg}
                     alt="Classical Lady Justice Statue"
                     referrerPolicy="no-referrer"
                     className="w-full h-[420px] object-cover object-center filter contrast-[1.05]"
@@ -171,7 +173,7 @@ export const Home: React.FC<HomeProps> = ({
             <div className="lg:col-span-4">
               <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-lg">
                 <img
-                  src="/src/assets/images/law_symbol_scales_gavel_1784878581133.jpg"
+                  src={lawSymbolImg}
                   alt="Scales of Justice & Legal Symbol"
                   referrerPolicy="no-referrer"
                   className="w-full h-[380px] object-cover"

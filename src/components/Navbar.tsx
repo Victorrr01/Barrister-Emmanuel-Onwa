@@ -43,34 +43,34 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
         scrolled ? 'max-h-0 py-0 opacity-0 overflow-hidden border-none' : 'max-h-12 py-2 opacity-100'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center space-x-6">
-            <a href={`tel:${ATTORNEY_INFO.phone}`} className="flex items-center space-x-1.5 hover:text-amber-400 transition-colors">
+          <div className="flex items-center space-x-4 lg:space-x-6">
+            <a href={`tel:${ATTORNEY_INFO.phone}`} className="flex items-center space-x-1.5 hover:text-amber-400 transition-colors shrink-0">
               <Phone className="w-3.5 h-3.5 text-amber-500" />
-              <span>{ATTORNEY_INFO.phone}</span>
+              <span className="font-semibold text-white">{ATTORNEY_INFO.phone}</span>
             </a>
             <a 
               href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about your legal services.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+              className="flex items-center space-x-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium shrink-0"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
             </a>
-            <a href={`mailto:${ATTORNEY_INFO.email}`} className="flex items-center space-x-1.5 hover:text-amber-400 transition-colors">
+            <a href={`mailto:${ATTORNEY_INFO.email}`} className="hidden xl:flex items-center space-x-1.5 hover:text-amber-400 transition-colors shrink-0">
               <Mail className="w-3.5 h-3.5 text-amber-500" />
               <span>{ATTORNEY_INFO.email}</span>
             </a>
-            <div className="flex items-center space-x-1.5 text-slate-400">
-              <MapPin className="w-3.5 h-3.5 text-amber-500" />
-              <span>{ATTORNEY_INFO.officeAddress}, {ATTORNEY_INFO.cityStateZip}</span>
+            <div className="hidden lg:flex items-center space-x-1.5 text-slate-400">
+              <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>Ilorin, Kwara State • Nationwide Representation (All 36 States & FCT)</span>
             </div>
           </div>
-          <div className="flex items-center space-x-4 text-slate-400">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">
-              Supreme Court Advocate • Nationwide Practice (All 36 States & FCT)
+          <div className="flex items-center space-x-3 text-slate-400 shrink-0">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              Supreme Court Advocate
             </span>
-            <span>{ATTORNEY_INFO.officeHours.split('(')[0]}</span>
+            <span className="hidden xl:inline text-[11px] text-slate-400">Mon - Fri: 8:00 AM - 5:30 PM WAT</span>
           </div>
         </div>
       </div>
