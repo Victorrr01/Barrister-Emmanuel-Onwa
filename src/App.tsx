@@ -76,7 +76,7 @@ export default function App() {
           target="_blank"
           rel="noopener noreferrer"
           id="floating-whatsapp-btn"
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group backdrop-blur-md"
+          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group"
           title="Chat on WhatsApp (+234 806 471 0262)"
         >
           <MessageCircle className="w-4 h-4 animate-bounce" />
@@ -87,7 +87,7 @@ export default function App() {
           <button
             onClick={() => setAiAssistantOpen(true)}
             id="floating-ai-assistant-btn"
-            className="h-11 px-3.5 rounded-full bg-slate-900/95 text-amber-400 border border-amber-500/40 shadow-xl flex items-center space-x-2 text-xs font-semibold hover:bg-slate-900 hover:scale-105 active:scale-95 transition-all duration-200 group backdrop-blur-md"
+            className="h-11 px-3.5 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center space-x-2 text-xs font-semibold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200 group"
             title="Ask Legal AI FAQ Guide"
           >
             <MessageSquare className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />

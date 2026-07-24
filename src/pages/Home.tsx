@@ -56,7 +56,7 @@ export const Home: React.FC<HomeProps> = ({
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-12 pb-20 overflow-hidden border-b border-slate-800">
         {/* Background ambient lighting */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-amber-500/5 rounded-full pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -129,17 +129,17 @@ export const Home: React.FC<HomeProps> = ({
             {/* Right Visual Graphic (Lady Justice Image Asset) */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-sm lg:max-w-none">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-700 rounded-3xl blur-xl opacity-30"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-amber-700/20 rounded-3xl"></div>
                 <div className="relative bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src={ladyJusticeImg}
                     alt="Classical Lady Justice Statue"
                     referrerPolicy="no-referrer"
-                    className="w-full h-[420px] object-cover object-center filter contrast-[1.05]"
+                    className="w-full h-[420px] object-cover object-center"
                   />
                   
                   {/* Floating Circular Badge Overlay */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-slate-950/90 backdrop-blur-md p-4 rounded-xl border border-slate-700/90 flex items-center justify-between">
+                  <div className="absolute bottom-4 left-4 right-4 bg-slate-950/90 p-4 rounded-xl border border-slate-700/90 flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-400 shrink-0">
                         <Award className="w-5 h-5" />
@@ -178,7 +178,7 @@ export const Home: React.FC<HomeProps> = ({
                   referrerPolicy="no-referrer"
                   className="w-full h-[380px] object-cover"
                 />
-                <div className="absolute bottom-0 inset-x-0 bg-slate-950/90 backdrop-blur-sm text-white p-3 text-center border-t border-slate-800">
+                <div className="absolute bottom-0 inset-x-0 bg-slate-950/90 text-white p-3 text-center border-t border-slate-800">
                   <span className="font-serif font-bold text-sm text-amber-400 block">{ATTORNEY_INFO.firmName}</span>
                   <span className="text-[11px] text-slate-300 uppercase tracking-widest block">Justice • Integrity • Excellence</span>
                 </div>

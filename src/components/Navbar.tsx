@@ -35,8 +35,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 w-full text-white border-b transition-all duration-300 ${
       scrolled 
-        ? 'bg-slate-950/95 backdrop-blur-xl border-amber-500/30 shadow-2xl shadow-black/50' 
-        : 'bg-slate-900/95 backdrop-blur-md border-slate-800 shadow-md'
+        ? 'bg-slate-950 border-amber-500/30 shadow-2xl shadow-black/50' 
+        : 'bg-slate-900 border-slate-800 shadow-md'
     }`}>
       {/* Top Utility Bar - Smoothly collapses on scroll */}
       <div className={`bg-slate-950 text-slate-300 text-xs transition-all duration-300 hidden md:block border-b border-slate-800/60 ${
