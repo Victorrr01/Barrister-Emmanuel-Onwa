@@ -76,7 +76,7 @@ export default function App() {
           target="_blank"
           rel="noopener noreferrer"
           id="floating-whatsapp-btn"
-          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-md flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group"
+          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold h-11 w-11 sm:w-auto sm:px-4 rounded-full shadow-md flex items-center justify-center sm:space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-emerald-400 group"
           title="Chat on WhatsApp (+234 806 471 0262)"
         >
           <MessageCircle className="w-4 h-4" />
@@ -87,7 +87,7 @@ export default function App() {
           <button
             onClick={() => setAiAssistantOpen(true)}
             id="floating-ai-assistant-btn"
-            className="h-11 px-3.5 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center space-x-2 text-xs font-semibold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200 group"
+            className="h-11 w-11 md:w-auto md:px-4 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center justify-center md:space-x-2 text-xs font-semibold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200 group"
             title="Ask Legal AI FAQ Guide"
           >
             <MessageSquare className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
@@ -97,7 +97,7 @@ export default function App() {
           <button
             onClick={() => handleOpenBooking()}
             id="floating-booking-btn"
-            className="h-11 px-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold shadow-md flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-amber-300"
+            className="h-11 w-11 sm:w-auto sm:px-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold shadow-md flex items-center justify-center sm:space-x-2 text-xs hover:scale-105 active:scale-95 transition-all duration-200 border border-amber-300"
           >
             <Calendar className="w-4 h-4" />
             <span className="hidden sm:inline">Book Consultation</span>
