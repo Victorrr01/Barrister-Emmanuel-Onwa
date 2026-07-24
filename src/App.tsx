@@ -1,0 +1,132 @@
+import React, { useState } from 'react';
+import { PageType, PracticeArea } from './types';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+import { ConsultationModal } from './components/ConsultationModal';
+import { PracticeAreaModal } from './components/PracticeAreaModal';
+import { AiAssistantDrawer } from './components/AiAssistantDrawer';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Services } from './pages/Services';
+import { Contact } from './pages/Contact';
+import { MessageSquare, Calendar, MessageCircle } from 'lucide-react';
+
+export default function App() {
+  const [currentPage, setCurrentPage] = useState<PageType>('home');
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [defaultBookingService, setDefaultBookingService] = useState<string | undefined>(undefined);
+  const [selectedPracticeArea, setSelectedPracticeArea] = useState<PracticeArea | null>(null);
+  const [aiAssistantOpen, setAiAssistantOpen] = useState(false);
+
+  const handleNavigate = (page: PageType) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleOpenBooking = (serviceTitle?: string) => {
+    setDefaultBookingService(serviceTitle);
+    setBookingModalOpen(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-amber-500 selection:text-slate-950">
+      
+      {/* Top Navbar */}
+      <Navbar
+        currentPage={currentPage}
+        onNavigate={handleNavigate}
+        onOpenBooking={() => handleOpenBooking()}
+      />
+
+      {/* Main Active Page View */}
+      <main className="flex-1 pt-[80px] md:pt-[120px]">
+        {currentPage === 'home' && (
+          <Home
+            onNavigate={handleNavigate}
+            onOpenBooking={handleOpenBooking}
+            onSelectPracticeArea={(area) => setSelectedPracticeArea(area)}
+            onOpenAiAssistant={() => setAiAssistantOpen(true)}
+          />
+        )}
+
+        {currentPage === 'about' && (
+          <About
+            onOpenBooking={() => handleOpenBooking()}
+          />
+        )}
+
+        {currentPage === 'services' && (
+          <Services
+            onOpenBooking={handleOpenBooking}
+            onSelectPracticeArea={(area) => setSelectedPracticeArea(area)}
+          />
+        )}
+
+        {currentPage === 'contact' && (
+          <Contact
+            onOpenBooking={() => handleOpenBooking()}
+          />
+        )}
+      </main>
+
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 z-30 flex flex-col items-end space-y-3">
+        <a
+          href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about legal consultation/representation.')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="floating-whatsapp-btn"
+          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all border border-emerald-400 group"
+          title="Chat on WhatsApp (+234 806 471 0262)"
+        >
+          <MessageCircle className="w-4 h-4" />
+          <span className="hidden sm:inline">WhatsApp (+234 806 471 0262)</span>
+        </a>
+
+        <button
+          onClick={() => setAiAssistantOpen(true)}
+          id="floating-ai-assistant-btn"
+          className="w-12 h-12 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group"
+          title="Ask Estate Assistant"
+        >
+          <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+        </button>
+
+        <button
+          onClick={() => handleOpenBooking()}
+          id="floating-booking-btn"
+          className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 text-xs hover:scale-105 active:scale-95 transition-all border border-amber-300"
+        >
+          <Calendar className="w-4 h-4" />
+          <span className="hidden sm:inline">Book Consultation</span>
+        </button>
+      </div>
+
+      {/* Footer */}
+      <Footer
+        onNavigate={handleNavigate}
+        onOpenBooking={() => handleOpenBooking()}
+      />
+
+      {/* Modals & Drawers */}
+      <ConsultationModal
+        isOpen={bookingModalOpen}
+        onClose={() => setBookingModalOpen(false)}
+        defaultService={defaultBookingService}
+      />
+
+      <PracticeAreaModal
+        practiceArea={selectedPracticeArea}
+        onClose={() => setSelectedPracticeArea(null)}
+        onOpenBooking={handleOpenBooking}
+      />
+
+      <AiAssistantDrawer
+        isOpen={aiAssistantOpen}
+        onClose={() => setAiAssistantOpen(false)}
+        onOpenBooking={() => handleOpenBooking()}
+      />
+
+    </div>
+  );
+}
