@@ -1,7 +1,10 @@
-import { PracticeArea, TeamMember } from '../types';
+import fs from 'fs';
+let content = fs.readFileSync('src/data/legalData.ts', 'utf-8');
 
-export const ATTORNEY_INFO = {
-  name: "ONWA EMMANUEL IFEANYI ESQ",
+content = content.replace(
+  /export const ATTORNEY_INFO = \{[\s\S]*?\n\};\n/m,
+  `export const ATTORNEY_INFO = {
+  name: "Barrister Emmanuel Onwa",
   title: "Principal Partner",
   firmName: "I.E. ONWA & CO. (REDEMPTION CHAMBERS)",
   tagline: "Nationwide Legal Practice • Principal Chambers in Ilorin, Kwara State",
@@ -25,8 +28,12 @@ export const ATTORNEY_INFO = {
     "Request Corporate & Litigation Review"
   ]
 };
+`
+);
 
-export const PRACTICE_AREAS: PracticeArea[] = [
+content = content.replace(
+  /export const PRACTICE_AREAS: PracticeArea\[\] = \[[\s\S]*?\];\n\nexport const TRUST_PILLARS/m,
+  `export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: "litigation-dispute",
     title: "Litigation and Dispute Resolution",
@@ -119,54 +126,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   }
 ];
 
-export const TEAM_MEMBERS: TeamMember[] = [
-  {
-    name: "ONWA EMMANUEL IFEANYI ESQ",
-    role: "Partner",
-    practiceAreas: ["Litigation and Dispute Resolution", "Corporate Practice", "Property Consultant"],
-    email: "Lawyeronwajr@gmail.com",
-    telephone: "+23481647102, 08125181217"
-  },
-  {
-    name: "CHIDIMA OBI",
-    role: "Associate",
-    practiceAreas: ["Litigation and Dispute Resolution"],
-    email: "Contact Chambers",
-    telephone: "Contact Chambers"
-  },
-  {
-    name: "GOODNEWS ETEOWO ESQ",
-    role: "Associate",
-    practiceAreas: ["Transport Law", "Corporate Practice", "Banking, Finance and Capital Market"],
-    email: "Contact Chambers",
-    telephone: "Contact Chambers"
-  },
-  {
-    name: "UEAJA CHIDIMA ESQ",
-    role: "Associate",
-    practiceAreas: ["Litigation and Dispute Resolution", "Corporate Practice"],
-    email: "Contact Chambers",
-    telephone: "Contact Chambers"
-  },
-  {
-    name: "M. I. AKOBI ESQ",
-    role: "Associate",
-    practiceAreas: ["Litigation and Dispute Resolution", "Corporate Practices"],
-    email: "Contact Chambers",
-    telephone: "Contact Chambers"
-  },
-  {
-    name: "M.O JIMOH ESQ",
-    role: "Associate",
-    practiceAreas: ["Litigation and Dispute resolution", "Corporate practice"],
-    email: "Contact Chambers",
-    telephone: "08167824518"
-  },
-  {
-    name: "H.A YAKUBU ESQ",
-    role: "Associate",
-    practiceAreas: ["Litigation and Dispute resolution", "Corporate practice", "Property consultant"],
-    email: "Contact Chambers",
-    telephone: "08141858840"
-  }
-];
+export const TRUST_PILLARS`
+);
+
+fs.writeFileSync('src/data/legalData.ts', content);

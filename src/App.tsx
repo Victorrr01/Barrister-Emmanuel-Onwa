@@ -4,9 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 import { PracticeAreaModal } from './components/PracticeAreaModal';
-import { AiAssistantDrawer } from './components/AiAssistantDrawer';
 import { Home } from './pages/Home';
-import { About } from './pages/About';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { MessageSquare, Calendar, MessageCircle } from 'lucide-react';
@@ -16,8 +14,7 @@ export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [defaultBookingService, setDefaultBookingService] = useState<string | undefined>(undefined);
   const [selectedPracticeArea, setSelectedPracticeArea] = useState<PracticeArea | null>(null);
-  const [aiAssistantOpen, setAiAssistantOpen] = useState(false);
-
+  
   const handleNavigate = (page: PageType) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -45,15 +42,10 @@ export default function App() {
             onNavigate={handleNavigate}
             onOpenBooking={handleOpenBooking}
             onSelectPracticeArea={(area) => setSelectedPracticeArea(area)}
-            onOpenAiAssistant={() => setAiAssistantOpen(true)}
           />
         )}
 
-        {currentPage === 'about' && (
-          <About
-            onOpenBooking={() => handleOpenBooking()}
-          />
-        )}
+        
 
         {currentPage === 'services' && (
           <Services
@@ -72,7 +64,7 @@ export default function App() {
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3 pointer-events-auto">
         <a
-          href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about legal consultation/representation.')}`}
+          href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Redemption Chambers, I would like to inquire about legal consultation/representation.')}`}
           target="_blank"
           rel="noopener noreferrer"
           id="floating-whatsapp-btn"
@@ -84,15 +76,7 @@ export default function App() {
         </a>
 
         <div className="flex items-center space-x-2">
-          <button
-            onClick={() => setAiAssistantOpen(true)}
-            id="floating-ai-assistant-btn"
-            className="h-11 w-11 md:w-auto md:px-4 rounded-full bg-slate-900 text-amber-400 border border-amber-500/40 shadow-xl flex items-center justify-center md:space-x-2 text-xs font-semibold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200 group"
-            title="Ask Legal AI FAQ Guide"
-          >
-            <MessageSquare className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
-            <span className="hidden md:inline">Ask AI Guide</span>
-          </button>
+          
 
           <button
             onClick={() => handleOpenBooking()}
@@ -124,11 +108,7 @@ export default function App() {
         onOpenBooking={handleOpenBooking}
       />
 
-      <AiAssistantDrawer
-        isOpen={aiAssistantOpen}
-        onClose={() => setAiAssistantOpen(false)}
-        onOpenBooking={() => handleOpenBooking()}
-      />
+      
 
     </div>
   );

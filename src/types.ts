@@ -1,4 +1,4 @@
-export type PageType = 'home' | 'about' | 'services' | 'contact';
+export type PageType = 'home' | 'services' | 'contact';
 
 export interface PracticeArea {
   id: string;
@@ -8,32 +8,6 @@ export interface PracticeArea {
   iconName: string;
   keyDeliverables: string[];
   idealFor: string[];
-}
-
-export interface Testimonial {
-  id: string;
-  clientName: string;
-  role: string;
-  location: string;
-  rating: number;
-  quote: string;
-  serviceUsed: string;
-}
-
-export interface CredentialItem {
-  category: string;
-  title: string;
-  institution: string;
-  year?: string;
-  details?: string;
-}
-
-export interface ProcessStep {
-  number: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  deliverables: string[];
 }
 
 export interface BookingFormData {
@@ -47,8 +21,10 @@ export interface BookingFormData {
   consultationMethod: 'in-person' | 'virtual' | 'phone';
 }
 
-export interface AssessmentAnswer {
-  questionId: number;
-  score: number;
-  recommendation: string;
+export interface TeamMember {
+  name: string;
+  role: string;
+  practiceAreas: string[];
+  email: string;
+  telephone: string;
 }

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { PRACTICE_AREAS, PROVEN_PROCESS } from '../data/legalData';
+import { PRACTICE_AREAS } from '../data/legalData';
 import { PracticeArea } from '../types';
-import { FeeEstimator } from '../components/FeeEstimator';
-import { Shield, CheckCircle, Users, ArrowRight, Download, FileText, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Building, RadioTower, Landmark, Scale, Shield, CheckCircle, Users, ArrowRight, Download, FileText, CheckCircle2, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface ServicesProps {
   onOpenBooking: (serviceTitle?: string) => void;
@@ -171,53 +170,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBooking, onSelectPract
         </div>
       </section>
 
-      {/* WHAT THE 3-STEP PROVEN PROCESS LOOKS LIKE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="text-center space-y-3">
-          <span className="text-amber-800 font-bold text-xs uppercase tracking-widest block">
-            Seamless & Stress-Free
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
-            Our 3-Step Estate Planning Process
-          </h2>
-          <p className="text-slate-600 text-sm max-w-lg mx-auto">
-            From initial discovery to formal signing and trust funding, we make estate planning simple and transparent.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PROVEN_PROCESS.map((step) => (
-            <div key={step.number} className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm relative space-y-4 flex flex-col justify-between">
-              <div>
-                <span className="font-serif text-4xl font-extrabold text-amber-500/80 block mb-2">
-                  {step.number}
-                </span>
-                <h3 className="font-serif font-bold text-slate-900 text-xl mb-1">
-                  {step.title}
-                </h3>
-                <p className="text-xs font-semibold text-amber-800 mb-3">{step.subtitle}</p>
-                <p className="text-slate-600 text-xs leading-relaxed mb-4">
-                  {step.description}
-                </p>
-              </div>
-
-              <div className="border-t border-slate-100 pt-4">
-                <span className="text-[11px] font-bold text-slate-900 uppercase tracking-wider block mb-2">
-                  Key Deliverables:
-                </span>
-                <ul className="space-y-1 text-xs text-slate-600">
-                  {step.deliverables.map((del, dIdx) => (
-                    <li key={dIdx} className="flex items-center space-x-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>{del}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      
 
       {/* DOWNLOADABLE ESTATE CHECKLIST PROMPT MODAL/CARD */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,10 +198,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBooking, onSelectPract
         </div>
       </section>
 
-      {/* TRANSPARENT FEE ESTIMATOR INTEGRATION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FeeEstimator onOpenBooking={onOpenBooking} />
-      </section>
+      
 
       {/* Download Checklist Modal */}
       {downloadModalOpen && (

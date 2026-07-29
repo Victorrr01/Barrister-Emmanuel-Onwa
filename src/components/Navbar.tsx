@@ -27,7 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
 
   const navItems: { label: string; page: PageType }[] = [
     { label: 'Home', page: 'home' },
-    { label: 'About Me', page: 'about' },
+
     { label: 'Services', page: 'services' },
     { label: 'Contact', page: 'contact' },
   ];
@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               <span className="font-semibold text-white">{ATTORNEY_INFO.phone}</span>
             </a>
             <a 
-              href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about your legal services.')}`}
+              href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Redemption Chambers, I would like to inquire about your legal services.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium shrink-0"
@@ -95,11 +95,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               <span className={`block font-serif font-bold tracking-tight text-white group-hover:text-amber-200 transition-all ${
                 scrolled ? 'text-base sm:text-xl' : 'text-lg sm:text-2xl'
               }`}>
-                BARRISTER EMMANUEL ONWA
+                REDEMPTION CHAMBERS
               </span>
-              <span className="block text-[10px] sm:text-[11px] font-medium uppercase tracking-widest text-amber-400/90">
-                Legal Practitioner & Solicitor • Nationwide Practice Across Nigeria
-              </span>
+              
             </div>
           </button>
 
@@ -184,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               <span>Schedule Consultation</span>
             </button>
             <a
-              href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Barrister Emmanuel Onwa, I would like to inquire about legal representation.')}`}
+              href={`https://wa.me/2348064710262?text=${encodeURIComponent('Hello Redemption Chambers, I would like to inquire about legal representation.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-lg font-bold text-center text-sm shadow-md transition-colors"

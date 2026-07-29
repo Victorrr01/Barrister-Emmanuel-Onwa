@@ -1,6 +1,6 @@
 import React from 'react';
 import { PracticeArea } from '../types';
-import { X, CheckCircle, Users, ArrowRight, Shield } from 'lucide-react';
+import { Building, RadioTower, Landmark, Scale, X, CheckCircle, Users, ArrowRight, Shield } from 'lucide-react';
 
 interface PracticeAreaModalProps {
   practiceArea: PracticeArea | null;

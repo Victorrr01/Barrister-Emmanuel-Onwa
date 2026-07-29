@@ -20,17 +20,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               <div className="w-9 h-9 rounded-md bg-amber-500/20 border border-amber-500/40 flex items-center justify-center">
                 <Shield className="w-5 h-5 text-amber-400" />
               </div>
-              <span className="font-serif text-xl font-bold text-white tracking-tight">
-                BARRISTER EMMANUEL ONWA
-              </span>
+              <span className="font-serif text-xl font-bold text-white tracking-tight">I.E. ONWA & CO.</span>
             </div>
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Providing strategic legal representation, land conveyancing (C of O / Title Perfection), High Court probate administration, and CAC corporate law across all 36 States of Nigeria & FCT Abuja (Chambers in Ilorin, Kwara State).
+              Providing high quality legal services across Litigation, Corporate Practice, Property Consultancy, and Telecommunication sectors in Nigeria and abroad.
             </p>
             <div className="pt-2 flex items-center space-x-2">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                18+ Years Legal Practice
-              </span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">14+ Years Legal Practice</span>
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
                 100% Flat-Fee Transparency
               </span>
@@ -48,11 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   Home Overview
                 </button>
               </li>
-              <li>
-                <button onClick={() => onNavigate('about')} className="hover:text-amber-300 transition-colors">
-                  About Barrister Emmanuel Onwa
-                </button>
-              </li>
+              
               <li>
                 <button onClick={() => onNavigate('services')} className="hover:text-amber-300 transition-colors">
                   Practice Areas & Services
@@ -139,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
             The information contained on this website is for general informational and educational purposes only and should not be construed as legal advice on any subject matter. No attorney-client relationship is created or implied by viewing this site or submitting a contact form. Prior results do not guarantee a similar outcome.
           </p>
           <p>
-            Barrister Emmanuel Onwa is enrolled as a Barrister & Solicitor of the Supreme Court of Nigeria and a member of the Nigerian Bar Association (NBA, Ilorin Branch). Chambers Address: {ATTORNEY_INFO.officeAddress}, {ATTORNEY_INFO.cityStateZip}.
+            Our partners are enrolled as Barristers & Solicitors of the Supreme Court of Nigeria. Chambers Address: {ATTORNEY_INFO.officeAddress}, {ATTORNEY_INFO.cityStateZip}.
           </p>
         </div>
 

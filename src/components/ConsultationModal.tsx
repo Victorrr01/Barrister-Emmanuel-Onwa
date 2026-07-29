@@ -83,7 +83,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             Schedule Legal Consultation (Nationwide & Virtual)
           </h3>
           <p className="text-slate-300 text-xs sm:text-sm mt-1">
-            Directly with Barrister Emmanuel Onwa • No-obligation & 100% confidential.
+            Directly with Redemption Chambers • No-obligation & 100% confidential.
           </p>
 
           {/* Step indicator */}
@@ -108,7 +108,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                   Consultation Request Confirmed!
                 </h4>
                 <p className="text-slate-600 text-xs sm:text-sm mt-1.5 max-w-md mx-auto">
-                  Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Barrister Emmanuel Onwa's chambers have received your booking.
+                  Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Redemption Chambers has received your booking.
                 </p>
               </div>
 
