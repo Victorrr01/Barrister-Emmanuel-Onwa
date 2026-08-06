@@ -13,8 +13,8 @@ export const CONTACT_INFO = {
 export const HISTORY_PARAGRAPHS = [
   "I.E. ONWA & CO. (Redemption Chambers) was established in 2012 and has, over the past 14 years, acquired substantial experience delivering high quality legal and general services to public and private sector clients in Nigeria and abroad.",
   "Between 2012 and 2026, the firm gradually expanded from a general law practice into the specialized property/real estate and corporate sectors, becoming internationally respected for its ability to provide specialist integrated legal services and solutions to the corporate commercial sector.",
-  "Over 14 years of practice, the firm has developed ideas and legal concepts across a wide range of practice areas, including litigation, property consultancy, arbitration, mediation, corporate law practice, transport and telecommunications, and banking and financial services including project financing and infrastructure.",
-  "Redemption Chambers currently maintains strong links across the continent with international law firms and across borders within Africa."
+  "Over the past 14 years of practice, the firm has developed extensive expertise and innovative legal solutions across a broad range of practice areas, including litigation, property consultancy, arbitration, mediation, corporate law practice, transport and telecommunications, as well as banking and financial services, including project finance and infrastructure development.",
+  "Redemption Chambers currently maintains strong professional links with international law firms and legal practitioners across Africa."
 ];
 
 export const FIRM_VALUES_INTRO = "In a developing country like Nigeria, with evolving business structures, the value of Redemption Chambers' experience and integrity in litigation, property, corporate, and commercial matters is essential. The firm advises on all aspects of legal practice, property, and corporate matters, distinguished by:";
@@ -28,8 +28,8 @@ export const FIRM_VALUES = [
 ];
 
 export const CSR_PARAGRAPHS = [
-  "Redemption Chambers is committed to building long-term strategic relationships with carefully chosen causes and charities. Partners actively engage in pro bono services for indigent citizens of Nigeria and Africa, including physical court representation and case filing. Partners are also patrons of various NGOs, charitable organizations, and churches, and the firm provides free legal advice to churches and NGOs through its own NGO, REDEEMERS INITIATIVE FOR YOUTH AWARENESS AND EMPOWERMENT.",
-  "The firm works to ensure a positive impact in the legal and wider community, guided by values of excellence, innovation, and pro bono service. Redemption Chambers states it opposes cheating and fraud and works against inhumane treatment of clients and non-clients."
+  "Redemption Chambers is committed to building long-term strategic relationships with carefully chosen causes and charities. Partners actively engage in pro bono services for indigent citizens of Nigeria and Africa, including physical court representation and case filing. Partners are also patrons of various NGOs, charitable organizations, and churches. The firm also provides free legal advice to churches and NGOs through its own NGO, REDEEMERS INITIATIVE FOR YOUTH AWARENESS AND EMPOWERMENT.",
+  "The firm works to ensure a positive impact in the legal and wider community, guided by the values of excellence, innovation, and pro bono service. Redemption Chambers opposes cheating and fraud and works against the inhumane treatment of clients and non-clients."
 ];
 
 export const PRACTICE_AREAS = [
@@ -88,6 +88,6 @@ export const TEAM_MEMBERS = [
     role: "",
     practiceAreas: ["Litigation and Dispute Resolution", "Corporate Practice", "Property Consultant"],
     email: "",
-    telephone: "08141858840"
+    telephone: "09052910649"
   }
 ];

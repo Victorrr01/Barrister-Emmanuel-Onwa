@@ -64,8 +64,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
     setIsError(false);
 
     try {
-      // NOTE: Replace YOUR_FORM_ID with the actual Formspree form ID once created
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      // Submit to the specific Formspree endpoint
+      const response = await fetch('https://formspree.io/f/xbgrjbpd', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -136,7 +136,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
               </button>
             </div>
           ) : (
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://formspree.io/f/xbgrjbpd" method="POST" onSubmit={handleSubmit} className="space-y-6">
               <input type="hidden" name="_subject" value="New Consultation Request - Redemption Chambers" />
               {isError && (
                 <div className="bg-red-50 text-red-700 p-4 rounded-lg border border-red-200 text-sm">
